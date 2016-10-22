@@ -1,0 +1,28 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="./polymer-style-module-embedded.html">
+
+<dom-module id="polymer-style-include-embedded">
+  <template>
+    <style include="polymer-style-module-embedded"></style>
+    <style>
+    .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+    </style>
+
+    <div class$="icon fs-icon fs-icon-[[type]]"></div>
+  </template>
+
+  <script>
+  (function() {
+    Polymer({
+      is: 'polymer-style-include-embedded',
+      properties: {
+        type: String
+      }
+    });
+  })();
+  </script>
+</dom-module>

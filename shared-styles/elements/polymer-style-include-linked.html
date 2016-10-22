@@ -1,0 +1,28 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="./polymer-style-module-linked.html">
+
+<dom-module id="polymer-style-include-linked">
+  <template>
+    <style include="polymer-style-module-linked"></style>
+    <style>
+    .icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+    </style>
+
+    <div class$="icon fs-icon fs-icon-[[type]]"></div>
+  </template>
+
+  <script>
+  (function() {
+    Polymer({
+      is: 'polymer-style-include-linked',
+      properties: {
+        type: String
+      }
+    });
+  })();
+  </script>
+</dom-module>

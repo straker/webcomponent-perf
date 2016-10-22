@@ -1,0 +1,20 @@
+{
+  "name": "webcomponent-perf",
+  "homepage": "https://github.com/straker/webcomponent-perf",
+  "authors": [
+    "Steven Lambert <stevenlambert503@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.0"
+  }
+}
