@@ -2,5 +2,26 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0"
-  }
+  },
+  "name": "webcomponent-perf",
+  "version": "1.0.0",
+  "description": "Various tests to test the performance of web components",
+  "main": "",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/straker/webcomponent-perf.git"
+  },
+  "author": "Steven Lambert <steven@sklambert.com> (http://sklambert.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/straker/webcomponent-perf/issues"
+  },
+  "homepage": "https://github.com/straker/webcomponent-perf#readme"
 }

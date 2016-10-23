@@ -4,7 +4,7 @@
   "authors": [
     "Steven Lambert <stevenlambert503@gmail.com>"
   ],
-  "description": "",
+  "description": "Various tests to test the performance of web components",
   "main": "",
   "license": "MIT",
   "ignore": [
