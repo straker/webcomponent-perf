@@ -1,0 +1,32 @@
+<style>
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+</style>
+
+<template id="custom-element-template">
+<div class="icon fs-icon"></div>
+</template>
+
+<script>
+(function() {
+  var doc = (document._currentScript || document.currentScript).ownerDocument;
+  var template = doc.querySelector('#custom-element-template');
+  var proto = Object.create(HTMLElement.prototype);
+
+  proto.createdCallback = function() {
+
+    var temp = document.importNode(template.content, true);
+    temp.querySelector('.fs-icon').classList.add('fs-icon-' + this.getAttribute('type'));
+
+    this.appendChild(temp);
+  }
+
+  document.registerElement('custom-element', {
+    prototype: proto
+  });
+})();
+</script>
