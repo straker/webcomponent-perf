@@ -1,0 +1,33 @@
+<template id="native-link-stylesheet-template">
+<link rel="stylesheet" href="css/shared-styles.css">
+
+<style>
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+</style>
+
+<div class="icon fs-icon"></div>
+</template>
+
+<script>
+(function() {
+  var doc = (document._currentScript || document.currentScript).ownerDocument;
+  var template = doc.querySelector('#native-link-stylesheet-template');
+  var proto = Object.create(HTMLElement.prototype);
+
+  proto.createdCallback = function() {
+    var root = this.createShadowRoot();
+    var temp = document.importNode(template.content, true);
+    temp.querySelector('.fs-icon').classList.add('fs-icon-' + this.getAttribute('type'));
+
+    root.appendChild(temp);
+  }
+
+  document.registerElement('native-link-stylesheet', {
+    prototype: proto
+  });
+})();
+</script>
